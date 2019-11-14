@@ -18,10 +18,10 @@ for ii=1:numel(tilesx)
         mkdir(dir_ii)
         
         im1=peppers(tilesx(ii):tilesx(ii)+stepx-1,tilesy(jj):tilesy(jj)+stepy-1,:);
-        imwrite(im1,[dir_ii filesep 'img.png'])
+        imwrite(im1,[dir_ii filesep 'imgA.png'])
         
         im1_edge = edge(rgb2gray(im1));
-        imwrite(im1_edge,[dir_ii filesep 'img-edge.png'])
+        imwrite(im1_edge,[dir_ii filesep 'imgB.png'])
         
         ct = ct+1;
     end
